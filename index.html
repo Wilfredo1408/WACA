@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Presentación Personal</title>
+  <title>Presentacion Wilfredo Andres Cortez Apaza</title>
   
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   
@@ -42,8 +42,25 @@
       margin-top: 10px;
     }
 
+    /* Estilos para centrar y uniformizar imágenes en carruseles */
+    #carrusel-general .carousel-item,
+    #carrusel-comida .carousel-item {
+      height: 400px; /* Altura fija para todas las imágenes */
+    }
+    #carrusel-general .carousel-item img,
+    #carrusel-comida .carousel-item img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover; /* Mantiene la proporción y cubre el área sin distorsión */
+      border: 3px solid #000;
+      border-radius: 8px;
+    }
+
   </style>
-</head>
+</head><!-- CARRUSEL SOLO HTML (sin CSS/JS) -->
+</div>
+
+
 <body>
   <div class="contenedor">
 
@@ -52,20 +69,56 @@
       <strong>Mi presentacion</strong>
     </div>
 
+
+
     <!-- Índice -->
     <div class="seccion">
       Índice
       <ul>
+        <li><a href="#carrusel-imagenes">Carrusel de Imágenes</a></li>
         <li><a href="#datos-personales">Datos Personales</a></li>
         <li><a href="#datos-generales">Datos Generales</a></li>
         <li><a href="#cancion-favorita">Canción Favorita</a></li>
+        <li><a href="#carrusel-comida"> Comida Favorita</a></li>
         <li><a href="#juego-favorito">Juego Favorito</a></li>
         <li><a href="#mision-vision">Foto de mi Visión</a></li>
-        <li><a href="#carrusel-imagenes">Carrusel de Imágenes</a></li>
+        <li><a href="#carrusel-comida"> Comida Favorita</a></li>
 
       </ul>
     </div>
 
+    <!-- Sección Carrusel de Imágenes -->
+    <div id="carrusel-imagenes" class="seccion">
+      Carrusel de Imágenes
+      <div id="carrusel-general" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" style="margin-top: 15px;">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="imagen5.jpeg" 
+                 class="d-block w-100" 
+                 alt="Imagen 1"
+                 style="object-position: top center;">
+          </div>
+          <div class="carousel-item">
+            <img src="imagen6.jpeg" 
+                 class="d-block w-100" 
+                 alt="Imagen 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://wallpapers.com/images/high/ashand-greninja-battle-bond-5z7n0u6pyz1ie4u6.webp" 
+                 class="d-block w-100" 
+                 alt="Imagen 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrusel-general" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrusel-general" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </div>
     <!-- Datos Personales -->
     <div id="datos-personales" class="seccion">
       Datos Personales
@@ -85,7 +138,6 @@
         Pasatiempos<br>
         Jugar videojuegos, ver series de TV,
         leer mangas<br>
-      
         
       </div>
     </div>
@@ -94,11 +146,14 @@
     <div id="cancion-favorita" class="seccion">
       Canción Favorita
       <div class="nota-lateral">
-        cualquier cancion que capte mi interes<br>
+        Canciones que capten mi interes<br>
+
         Bohemian Rapsody<br>
         fue de mis primeras canciones que me gustaron<br>
+
         Fairytale<br>
         me gusta la historia que cuenta la cancion<br>
+
         Enemy<br>
         me gusta ponerla cuando juego videojuegos, me motiva<br>
 
@@ -141,6 +196,54 @@
       </div>
     </div>
 
+    <!-- comida favorita -->
+    <div id="comida-favorita" class="seccion">
+      Comida Favorita
+      <div class="nota-lateral">
+        Preferidos<br>
+        Lasaña, Tallarin, Sopa de Fideo, Sopa de Mani<br>
+        me encanta estas comidas de fideos, cada uno es diferente a su manera y eso lo hace delicioso<br>
+        
+      </div>
+      <div id="carrusel-comida" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" style="margin-top: 15px;">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="lasaña.webp" 
+                 class="d-block w-100" 
+                 alt="Imagen 1">
+          </div>
+          <div class="carousel-item">
+            <img src="tallarin.webp" 
+                 class="d-block w-100" 
+                 alt="Imagen 2">
+          </div>
+          <div class="carousel-item">
+            <img src="sopa-de-fideo.webp" 
+                 class="d-block w-100" 
+                 alt="Imagen 3">
+          </div>
+          <div class="carousel-item">
+            <img src="sopa-de-mani.png" 
+                 class="d-block w-100" 
+                 alt="Imagen 4">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrusel-comida" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrusel-comida" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+
+
+
+    </div>    
+
+
+
     <!-- Juego Favorito -->
     <div id="juego-favorito" class="seccion">
       Juego Favorito
@@ -157,26 +260,22 @@
           <div class="carousel-item active">
             <img src="imagen1.jpeg" 
                  class="d-block w-100" 
-                 alt="Imagen 1" 
-                 style="border: 3px solid #000; border-radius: 8px;">
+                 alt="Imagen 1">
           </div>
           <div class="carousel-item">
             <img src="imagen2.jpeg" 
                  class="d-block w-100" 
-                 alt="Imagen 2" 
-                 style="border: 3px solid #000; border-radius: 8px;">
+                 alt="Imagen 2">
           </div>
           <div class="carousel-item">
             <img src="imagen3.jpeg" 
                  class="d-block w-100" 
-                 alt="Imagen 3" 
-                 style="border: 3px solid #000; border-radius: 8px;">
+                 alt="Imagen 3">
           </div>
           <div class="carousel-item">
             <img src="imagen4.jpeg" 
                  class="d-block w-100" 
-                 alt="Imagen 4" 
-                 style="border: 3px solid #000; border-radius: 8px;">
+                 alt="Imagen 4">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carrusel-juegos" data-bs-slide="prev">
@@ -212,40 +311,10 @@
 
     </div>
 
-    <!-- Sección Carrusel de Imágenes -->
-    <div id="carrusel-imagenes" class="seccion">
-      Carrusel de Imágenes
-      <div id="carrusel-general" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" style="margin-top: 15px;">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="imagen5.jpeg" 
-                 class="d-block w-100" 
-                 alt="Imagen 1" 
-                 style="border: 3px solid #000; border-radius: 8px;">
-          </div>
-          <div class="carousel-item">
-            <img src="imagen6.jpeg" 
-                 class="d-block w-100" 
-                 alt="Imagen 2" 
-                 style="border: 3px solid #000; border-radius: 8px;">
-          </div>
-          <div class="carousel-item">
-            <img src="https://wallpapers.com/images/high/ashand-greninja-battle-bond-5z7n0u6pyz1ie4u6.webp" 
-                 class="d-block w-100" 
-                 alt="Imagen 3" 
-                 style="border: 3px solid #000; border-radius: 8px;">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carrusel-general" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carrusel-general" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Siguiente</span>
-        </button>
-      </div>
-    </div>
+
+
+
+
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
